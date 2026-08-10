@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RV01 ORYGIN | VALENZUELA</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b0b0b;
+            color: #f4f4f4;
+            line-height: 1.6;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(8,8,8,0.96);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: auto;
+            padding: 22px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            font-family: Georgia, "Times New Roman", serif;
+            letter-spacing: 5px;
+            font-size: 24px;
+        }
+
+        nav a {
+            color: #f4f4f4;
+            text-decoration: none;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hero {
+            max-width: 1200px;
+            margin: auto;
+            padding: 90px 30px 50px;
+        }
+
+        .label {
+            color: #ba8b72;
+            letter-spacing: 4px;
+            font-size: 11px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(54px, 8vw, 100px);
+            font-weight: normal;
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            color: #aaa;
+            max-width: 700px;
+            font-size: 18px;
+            margin-bottom: 50px;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        section {
+            padding: 90px 30px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        h2 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: normal;
+            margin-bottom: 35px;
+        }
+
+        .intro {
+            max-width: 760px;
+            color: #aaa;
+            font-size: 17px;
+        }
+
+        .specs {
+            background: #121212;
+        }
+
+        .spec-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px 70px;
+            max-width: 900px;
+        }
+
+        .spec-item {
+            padding: 18px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .spec-item span:first-child {
+            color: #ba8b72;
+        }
+
+        .spec-item span:last-child {
+            text-align: right;
+            color: #ddd;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 70px;
+        }
+
+        .detail {
+            border-top: 1px solid #ba8b72;
+            padding-top: 25px;
+        }
+
+        .detail h3 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 28px;
+            font-weight: normal;
+            margin-bottom: 15px;
+        }
+
+        .detail p {
+            color: #999;
+        }
+
+        .back {
+            text-align: center;
+            padding: 70px 30px;
+            background: #151515;
+        }
+
+        .back a {
+            display: inline-block;
+            padding: 14px 28px;
+            border: 1px solid #ba8b72;
+            color: white;
+            text-decoration: none;
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        footer {
+            text-align: center;
+            padding: 35px;
+            color: #666;
+            font-size: 11px;
+            letter-spacing: 2px;
+        }
+
+        @media(max-width: 800px) {
+            .spec-grid,
+            .details-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                letter-spacing: 2px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="brand">VALENZUELA</div>
+        <a href="index.html">Volver a la colección</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="hero">
+        <div class="label">RV01</div>
+
+        <h1>ORYGIN</h1>
+
+        <p class="subtitle">
+            El primer capítulo de VALENZUELA. Un reloj mecánico de corazón abierto,
+            concebido alrededor de una estética clásica y detalles en oro rosa.
+        </p>
+
+        <img
+            src="images/rv01-origin.png"
+            alt="VALENZUELA RV01 ORYGIN"
+            class="hero-image">
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="label">El modelo</div>
+
+            <h2>El origen de VALENZUELA.</h2>
+
+            <p class="intro">
+                RV01 ORYGIN representa el punto de partida del proyecto VALENZUELA:
+                un reloj mecánico de diseño clásico, esfera de corazón abierto y una
+                combinación de tonos claros, cuero oscuro y acabados en oro rosa.
+            </p>
+        </div>
+    </section>
+
+    <section class="specs">
+        <div class="container">
+            <div class="label">Especificaciones</div>
+
+            <h2>Datos técnicos.</h2>
+
+            <div class="spec-grid">
+
+                <div class="spec-item">
+                    <span>Caja</span>
+                    <span>40 mm</span>
+                </div>
+
+                <div class="spec-item">
+                    <span>Grosor</span>
+                    <span>14 mm</span>
+                </div>
+
+                <div class="spec-item">
+                    <span>Ancho de asas</span>
+                    <span>20 mm</span>
+                </div>
+
+                <div class="spec-item">
+                    <span>Cristal</span>
+                    <span>Mineral abombado</span>
+                </div>
+
+                <div class="spec-item">
+                    <span>Movimiento</span>
+                    <span>TMI NH38</span>
+                </div>
+
+                <div class="spec-item">
+                    <span>Esfera</span>
+                    <span>35 mm · corazón abierto</span>
+                </div>
+
+                <div class="spec-item">
+                    <span>Agujas</span>
+                    <span>Oro rosa</span>
+                </div>
+
+                <div class="spec-item">
+                    <span>Rotor</span>
+                    <span>Oro rosa grabado</span>
+                </div>
+
+                <div class="spec-item">
+                    <span>Correa</span>
+                    <span>Piel de ternera · 20 mm</span>
+                </div>
+
+                <div class="spec-item">
+                    <span>Resistencia al agua</span>
+                    <span>5 ATM</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="label">Detalles</div>
+
+            <h2>Una identidad construida en los detalles.</h2>
+
+            <div class="details-grid">
+
+                <div class="detail">
+                    <h3>Corazón abierto</h3>
+                    <p>
+                        La apertura de la esfera permite contemplar parte del movimiento
+                        y refuerza el carácter mecánico del RV01 ORYGIN.
+                    </p>
+                </div>
+
+                <div class="detail">
+                    <h3>Oro rosa</h3>
+                    <p>
+                        Caja, agujas, rotor y diferentes elementos visuales comparten
+                        una misma línea estética en tonos oro rosa.
+                    </p>
+                </div>
+
+                <div class="detail">
+                    <h3>Movimiento NH38</h3>
+                    <p>
+                        Movimiento mecánico automático TMI NH38, elegido como base
+                        para el primer modelo de VALENZUELA.
+                    </p>
+                </div>
+
+                <div class="detail">
+                    <h3>Personalización</h3>
+                    <p>
+                        Logotipo, rotor, corona, hebilla y otros elementos forman parte
+                        del lenguaje propio desarrollado para VALENZUELA.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="back">
+        <a href="index.html#modelos">
+            Volver a la colección
+        </a>
+    </section>
+
+</main>
+
+<footer>
+    © 2026 VALENZUELA · Todos los derechos reservados
+</footer>
+
+</body>
+</html>
