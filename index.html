@@ -3,14 +3,479 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>VALENZUELA | Relojería</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0c0c0c;
+            color: #f4f4f4;
+            line-height: 1.6;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(10,10,10,0.92);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: auto;
+            padding: 22px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: Georgia, "Times New Roman", serif;
+            letter-spacing: 5px;
+            font-size: 24px;
+            font-weight: normal;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #f4f4f4;
+            text-decoration: none;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            opacity: 0.65;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 120px 30px 60px;
+            background:
+                radial-gradient(circle at center, #28211e 0%, #111 40%, #070707 75%);
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .hero-small {
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            font-size: 12px;
+            margin-bottom: 25px;
+            color: #ba8b72;
+        }
+
+        h1 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(55px, 10vw, 120px);
+            letter-spacing: 10px;
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+
+        .hero-subtitle {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 20px;
+            letter-spacing: 4px;
+            color: #c7c7c7;
+            margin-bottom: 40px;
+        }
+
+        .hero-line {
+            width: 70px;
+            height: 1px;
+            background: #ba8b72;
+            margin: 0 auto 40px;
+        }
+
+        .hero-text {
+            max-width: 620px;
+            margin: auto;
+            color: #aaa;
+            font-size: 16px;
+        }
+
+        section {
+            padding: 120px 30px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .section-label {
+            color: #ba8b72;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-size: 11px;
+            margin-bottom: 18px;
+        }
+
+        h2 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(38px, 5vw, 60px);
+            font-weight: normal;
+            margin-bottom: 30px;
+        }
+
+        .intro {
+            max-width: 750px;
+            color: #aaa;
+            font-size: 17px;
+        }
+
+        .models {
+            background: #121212;
+        }
+
+        .model-grid {
+            margin-top: 60px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .model {
+            min-height: 480px;
+            padding: 45px;
+            background:
+                linear-gradient(160deg, #25201d, #111);
+            border: 1px solid rgba(255,255,255,0.08);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .model-number {
+            color: #ba8b72;
+            letter-spacing: 3px;
+            font-size: 11px;
+            margin-bottom: 10px;
+        }
+
+        .model h3 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 34px;
+            font-weight: normal;
+            margin-bottom: 15px;
+        }
+
+        .model p {
+            color: #999;
+            max-width: 430px;
+        }
+
+        .process {
+            background: #080808;
+        }
+
+        .process-grid {
+            margin-top: 60px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .process-item {
+            border-top: 1px solid #ba8b72;
+            padding-top: 25px;
+        }
+
+        .process-item span {
+            color: #ba8b72;
+            font-size: 12px;
+        }
+
+        .process-item h3 {
+            margin: 12px 0;
+            font-family: Georgia, "Times New Roman", serif;
+            font-weight: normal;
+        }
+
+        .process-item p {
+            color: #888;
+            font-size: 14px;
+        }
+
+        .contact {
+            text-align: center;
+            background: #151515;
+        }
+
+        .contact p {
+            color: #999;
+            margin-bottom: 30px;
+        }
+
+        .contact a {
+            display: inline-block;
+            padding: 14px 30px;
+            border: 1px solid #ba8b72;
+            color: #f4f4f4;
+            text-decoration: none;
+            letter-spacing: 3px;
+            font-size: 11px;
+            text-transform: uppercase;
+        }
+
+        footer {
+            padding: 40px 30px;
+            text-align: center;
+            color: #666;
+            font-size: 11px;
+            letter-spacing: 2px;
+            border-top: 1px solid rgba(255,255,255,0.07);
+        }
+
+        @media(max-width: 800px) {
+
+            nav ul {
+                display: none;
+            }
+
+            .model-grid,
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                min-height: 90vh;
+            }
+
+            h1 {
+                letter-spacing: 5px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <h1>VALENZUELA</h1>
-    <h2>Relojería</h2>
 
-    <p>Web oficial de VALENZUELA.</p>
-    <p>Próximamente.</p>
+<header>
+    <nav>
+        <div class="logo">VALENZUELA</div>
+
+        <ul>
+            <li><a href="#marca">La marca</a></li>
+            <li><a href="#modelos">Colección</a></li>
+            <li><a href="#proceso">Proceso</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-small">
+            Relojería independiente
+        </div>
+
+        <h1>VALENZUELA</h1>
+
+        <div class="hero-subtitle">
+            TIEMPO · DISEÑO · CARÁCTER
+        </div>
+
+        <div class="hero-line"></div>
+
+        <p class="hero-text">
+            Relojes concebidos desde la pasión por la mecánica,
+            el diseño y los detalles que convierten cada pieza
+            en algo personal.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section id="marca">
+
+    <div class="container">
+
+        <div class="section-label">
+            La marca
+        </div>
+
+        <h2>Una manera personal de entender el tiempo.</h2>
+
+        <p class="intro">
+            VALENZUELA nace como un proyecto independiente de relojería,
+            desarrollado alrededor de una idea sencilla: crear relojes
+            con identidad propia combinando diseño, mecánica y una
+            cuidada selección de componentes.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="models" id="modelos">
+
+    <div class="container">
+
+        <div class="section-label">
+            Colección
+        </div>
+
+        <h2>Los primeros capítulos.</h2>
+
+        <div class="model-grid">
+
+            <article class="model">
+
+                <div class="model-number">
+                    RV01
+                </div>
+
+                <h3>ORIGIN</h3>
+
+                <p>
+                    El inicio de VALENZUELA. Un reloj mecánico
+                    concebido alrededor de un diseño clásico,
+                    corazón abierto y detalles en oro rosa.
+                </p>
+
+            </article>
+
+
+            <article class="model">
+
+                <div class="model-number">
+                    RV02
+                </div>
+
+                <h3>ESTELAR</h3>
+
+                <p>
+                    Una interpretación más compleja de la relojería
+                    VALENZUELA, protagonizada por la indicación de
+                    fase lunar y una estética inspirada en el cielo.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="process" id="proceso">
+
+    <div class="container">
+
+        <div class="section-label">
+            El proceso
+        </div>
+
+        <h2>Del concepto al reloj.</h2>
+
+        <div class="process-grid">
+
+            <div class="process-item">
+                <span>01</span>
+                <h3>Concepto</h3>
+                <p>
+                    Cada modelo comienza definiendo su carácter,
+                    proporciones y filosofía.
+                </p>
+            </div>
+
+            <div class="process-item">
+                <span>02</span>
+                <h3>Componentes</h3>
+                <p>
+                    Selección de movimientos, cajas, esferas,
+                    agujas y materiales.
+                </p>
+            </div>
+
+            <div class="process-item">
+                <span>03</span>
+                <h3>Personalización</h3>
+                <p>
+                    Elementos propios de VALENZUELA aplicados
+                    a esfera, corona, rotor y otros detalles.
+                </p>
+            </div>
+
+            <div class="process-item">
+                <span>04</span>
+                <h3>Montaje</h3>
+                <p>
+                    Integración, ajuste y revisión final
+                    de cada pieza.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="contact" id="contacto">
+
+    <div class="container">
+
+        <div class="section-label">
+            Contacto
+        </div>
+
+        <h2>VALENZUELA</h2>
+
+        <p>
+            Proyecto independiente de relojería.
+        </p>
+
+        <a href="mailto:tuemail@ejemplo.com">
+            Contactar
+        </a>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    © 2026 VALENZUELA · Todos los derechos reservados
+
+</footer>
+
 </body>
 </html>
