@@ -107,38 +107,48 @@ margin-bottom: 55px;
         }
 
         .intro {
-            max-width: 760px;
-            color: #aaa;
-            font-size: 17px;
-        }
+    max-width: 850px;
+    color: #aaa;
+    font-size: 18px;
+    line-height: 1.9;
+}
 
         .specs {
-            background: #121212;
-        }
+    background: #111;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
 
         .spec-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px 70px;
-            max-width: 900px;
-        }
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 60px;
+    max-width: 1000px;
+    margin-top: 45px;
+}
 
-        .spec-item {
-            padding: 18px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-        }
+.spec-item {
+    padding: 22px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.10);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
 
-        .spec-item span:first-child {
-            color: #ba8b72;
-        }
+.spec-item span:first-child {
+    color: #ba8b72;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
 
-        .spec-item span:last-child {
-            text-align: right;
-            color: #ddd;
-        }
+.spec-item span:last-child {
+    color: #e5e5e5;
+    text-align: right;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+}
 
         .details-grid {
             display: grid;
