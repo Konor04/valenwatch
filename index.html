@@ -43,12 +43,17 @@
             justify-content: space-between;
         }
 
-        .logo {
-            font-family: Georgia, "Times New Roman", serif;
-            letter-spacing: 5px;
-            font-size: 24px;
-            font-weight: normal;
-        }
+       .logo-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.brand-logo {
+    height: 58px;
+    width: auto;
+    display: block;
+}
 
         nav ul {
             list-style: none;
@@ -311,7 +316,9 @@ position: relative;
 
 <header>
     <nav>
-        <div class="logo">VALENZUELA</div>
+       <a href="index.html" class="logo-link">
+    <img src="images/valenzuela-logo-web.png" alt="VALENZUELA" class="brand-logo">
+</a>
 
         <ul>
             <li><a href="#marca">La marca</a></li>
