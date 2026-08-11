@@ -1,13 +1,515 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>RV02 ESTELAR | VALENZUELA</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b0b0b;
+            color: #f4f4f4;
+            line-height: 1.6;
+        }
+
+        /* CABECERA */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(8,8,8,0.96);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: auto;
+            padding: 18px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            font-family: Georgia, "Times New Roman", serif;
+            letter-spacing: 5px;
+            font-size: 22px;
+        }
+
+        nav a {
+            color: #f4f4f4;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 11px;
+        }
+
+
+        /* HERO */
+
+        .hero {
+            max-width: 1320px;
+            margin: auto;
+            padding: 110px 40px 70px;
+        }
+
+        .label {
+            color: #ba8b72;
+            letter-spacing: 4px;
+            font-size: 11px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(60px, 9vw, 112px);
+            font-weight: normal;
+            letter-spacing: 6px;
+            line-height: 0.95;
+            margin-bottom: 24px;
+        }
+
+        .subtitle {
+            color: #aaa;
+            max-width: 780px;
+            font-size: 19px;
+            line-height: 1.8;
+            margin-bottom: 55px;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+
+        /* SECCIONES */
+
+        section {
+            padding: 90px 30px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        h2 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: normal;
+            margin-bottom: 35px;
+        }
+
+        .intro {
+            max-width: 850px;
+            color: #aaa;
+            font-size: 18px;
+            line-height: 1.9;
+        }
+
+
+        /* ESPECIFICACIONES */
+
+        .specs {
+            background: #111;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .spec-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0 60px;
+            max-width: 1000px;
+            margin-top: 45px;
+        }
+
+        .spec-item {
+            padding: 22px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.10);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .spec-item span:first-child {
+            color: #ba8b72;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .spec-item span:last-child {
+            color: #e5e5e5;
+            text-align: right;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 17px;
+        }
+
+
+        /* DETALLES */
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 70px 65px;
+            margin-top: 50px;
+        }
+
+        .detail {
+            border-top: 1px solid #ba8b72;
+            padding-top: 25px;
+        }
+
+        .detail h3 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 28px;
+            font-weight: normal;
+            margin-bottom: 15px;
+        }
+
+        .detail p {
+            color: #999;
+            line-height: 1.8;
+        }
+
+
+        /* VOLVER */
+
+        .back {
+            text-align: center;
+            padding: 70px 30px;
+            background: #151515;
+        }
+
+        .back a {
+            display: inline-block;
+            padding: 14px 28px;
+            border: 1px solid #ba8b72;
+            color: white;
+            text-decoration: none;
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .back a:hover {
+            background: #ba8b72;
+            color: #0b0b0b;
+        }
+
+
+        footer {
+            text-align: center;
+            padding: 35px;
+            color: #666;
+            font-size: 11px;
+            letter-spacing: 2px;
+        }
+
+
+        /* MÓVIL */
+
+        @media (max-width: 800px) {
+
+            .spec-grid,
+            .details-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 80px 22px 45px;
+            }
+
+            section {
+                padding: 70px 22px;
+            }
+
+            h1 {
+                letter-spacing: 2px;
+            }
+
+        }
+
+    </style>
 </head>
-<body style="background:#0b0b0b;color:white;font-family:Arial;padding:40px;">
-    <h1>RV02 ESTELAR</h1>
-    <p>Página en construcción.</p>
-    <a href="index.html" style="color:#ba8b72;">Volver a la colección</a>
+
+
+<body>
+
+<header>
+
+    <nav>
+
+        <div class="brand">
+            VALENZUELA
+        </div>
+
+        <a href="index.html#modelos">
+            Volver a la colección
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="label">
+            RV02
+        </div>
+
+        <h1>
+            ESTELAR
+        </h1>
+
+        <p class="subtitle">
+            Una interpretación de VALENZUELA inspirada en el cielo.
+            Fase lunar, fecha y una esfera azul profunda articulan
+            el carácter del segundo capítulo de la colección.
+        </p>
+
+        <img
+            src="images/rv02-estelar.png"
+            alt="VALENZUELA RV02 ESTELAR"
+            class="hero-image">
+
+    </section>
+
+
+
+    <!-- EL MODELO -->
+
+    <section>
+
+        <div class="container">
+
+            <div class="label">
+                El modelo
+            </div>
+
+            <h2>
+                Una mirada al cielo.
+            </h2>
+
+            <p class="intro">
+                RV02 ESTELAR nace como una evolución natural del lenguaje de
+                VALENZUELA. La esfera azul, los índices plateados y la complicación
+                de fase lunar construyen una estética más técnica y contemporánea,
+                manteniendo una lectura limpia y equilibrada.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ESPECIFICACIONES -->
+
+    <section class="specs">
+
+        <div class="container">
+
+            <div class="label">
+                Especificaciones
+            </div>
+
+            <h2>
+                Datos técnicos.
+            </h2>
+
+            <div class="spec-grid">
+
+                <div class="spec-item">
+                    <span>Caja</span>
+                    <span>39 mm</span>
+                </div>
+
+                <div class="spec-item">
+                    <span>Esfera</span>
+                    <span>Ø33,50 mm</span>
+                </div>
+
+                <div class="spec-item">
+                    <span>Movimiento</span>
+                    <span>Sellita SW288-1</span>
+                </div>
+
+                <div class="spec-item">
+                    <span>Tipo</span>
+                    <span>Automático</span>
+                </div>
+
+                <div class="spec-item">
+                    <span>Fase lunar</span>
+                    <span>A las 6 h</span>
+                </div>
+
+                <div class="spec-item">
+                    <span>Abertura lunar</span>
+                    <span>Ø6,00 mm</span>
+                </div>
+
+                <div class="spec-item">
+                    <span>Fecha</span>
+                    <span>A las 3 h</span>
+                </div>
+
+                <div class="spec-item">
+                    <span>Ventana de fecha</span>
+                    <span>2,70 × 2,00 mm</span>
+                </div>
+
+                <div class="spec-item">
+                    <span>Acabado</span>
+                    <span>Acero · tonos plateados</span>
+                </div>
+
+                <div class="spec-item">
+                    <span>Correa</span>
+                    <span>Piel azul / brazalete</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- DETALLES -->
+
+    <section>
+
+        <div class="container">
+
+            <div class="label">
+                Detalles
+            </div>
+
+            <h2>
+                Técnica y carácter.
+            </h2>
+
+            <div class="details-grid">
+
+
+                <div class="detail">
+
+                    <h3>
+                        Fase lunar
+                    </h3>
+
+                    <p>
+                        La abertura circular situada a las 6 h se integra en el eje
+                        vertical de la esfera y constituye el principal elemento
+                        visual del RV02 ESTELAR.
+                    </p>
+
+                </div>
+
+
+                <div class="detail">
+
+                    <h3>
+                        Fecha a las 3
+                    </h3>
+
+                    <p>
+                        La ventana de fecha se posiciona sobre el eje horizontal,
+                        equilibrando visualmente la complicación lunar.
+                    </p>
+
+                </div>
+
+
+                <div class="detail">
+
+                    <h3>
+                        Sellita SW288-1
+                    </h3>
+
+                    <p>
+                        El movimiento automático Sellita SW288-1 sirve como base
+                        mecánica del modelo y define la arquitectura funcional de
+                        fecha y fase lunar.
+                    </p>
+
+                </div>
+
+
+                <div class="detail">
+
+                    <h3>
+                        Esfera azul
+                    </h3>
+
+                    <p>
+                        Un tono azul profundo y degradado refuerza la inspiración
+                        celeste del modelo, acompañado por índices y agujas de
+                        acabado plateado.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- VOLVER -->
+
+    <section class="back">
+
+        <a href="index.html#modelos">
+            Volver a la colección
+        </a>
+
+    </section>
+
+
+</main>
+
+
+<footer>
+
+    © 2026 VALENZUELA · Todos los derechos reservados
+
+</footer>
+
+
 </body>
+
 </html>
