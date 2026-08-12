@@ -327,6 +327,9 @@ position: relative;
                 letter-spacing: 5px;
             }
         }
+        .contact-mobile {
+    display: none;
+}
         @media (max-width: 768px) {
     .hero h1 {
         font-size: 10.5vw;
@@ -339,6 +342,13 @@ position: relative;
         padding-right: 18px;
         overflow: hidden;
     }
+.contact-desktop {
+    display: none;
+}
+
+.contact-mobile {
+    display: inline-block;
+}
 }
     </style>
 </head>
@@ -550,9 +560,15 @@ position: relative;
             Proyecto independiente de relojería.
         </p>
 
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=valenzuela.watch@gmail.com&su=Consulta%20VALENZUELA"
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=valenzuela.watch@gmail.com&su=Consulta%20VALENZUELA"
    target="_blank"
-   rel="noopener noreferrer">
+   rel="noopener noreferrer"
+   class="contact-desktop">
+    Contactar
+</a>
+
+<a href="mailto:valenzuela.watch@gmail.com?subject=Consulta%20VALENZUELA"
+   class="contact-mobile">
     Contactar
 </a>
     </div>
